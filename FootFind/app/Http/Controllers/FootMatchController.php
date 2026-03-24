@@ -2,53 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FootMatch;
+
 use Illuminate\Http\Request;
 
 class FootMatchController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // INDEX
     public function index()
     {
-        //
+        $footMatches = FootMatch::all();
+        return view('footMatches.index', compact('footMatches'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    // CREATE
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // STORE
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
+    // SHOW
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    // EDIT
     public function edit(string $id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    // UPDATE
     public function update(Request $request, string $id)
     {
         //
